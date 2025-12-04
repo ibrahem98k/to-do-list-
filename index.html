@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ibra To-Do</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Pacifico&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <div class="greeting-wrapper">
+    <p id="timeGreeting" class="time-greeting"></p>
+  </div>
+
+  <main class="app">
+    <header class="app-header">
+      <div class="title-group" data-aos="fade-down" data-aos-delay="100">
+        <h1 class="app-title">ibra To-Do</h1>
+        <p class="app-subtitle">Make your day feel light and organized.</p>
+      </div>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" data-aos="fade-down" data-aos-delay="150">
+        <span class="theme-icon" id="themeIcon">
+          
+        </span>
+      </button>
+    </header>
+
+    <section class="input-row" data-aos="fade-up" data-aos-delay="200">
+      <input
+        id="taskInput"
+        class="task-input"
+        type="text"
+        placeholder="What do you want to get done?"
+        autocomplete="off"
+      />
+      <button id="addTaskBtn" class="primary-btn">
+        Add
+      </button>
+    </section>
+
+    <section class="filters" data-aos="fade-up" data-aos-delay="230">
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </section>
+
+    <section class="todo-list-section" data-aos="fade-up" data-aos-delay="260">
+      <ul id="todoList" class="todo-list"></ul>
+      <p id="emptyState" class="empty-state">No tasks yet. Add your first one.</p>
+    </section>
+
+    <footer class="app-footer" data-aos="fade-up" data-aos-delay="300">
+      <span id="itemsLeft" class="items-left">0 tasks</span>
+      <button id="clearCompletedBtn" class="ghost-btn">Clear completed</button>
+    </footer>
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
